@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Lexer_POS_Cucumber</td>
+              <td>1</td>
+            <td>14 Dec 2020, 12:14</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">HomepageTest.calander_page_opens_on_screen()</td>
+              <td>1</td>
+              <td class="duration" data-value="2429984">002ms</td>
+              <td class="duration" data-value="2429984">002ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomepageTest.day_view_opens_on_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="50792079">050ms</td>
+              <td class="duration" data-value="50792079">050ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomepageTest.month_view_opens_on_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="68649597">068ms</td>
+              <td class="duration" data-value="68649597">068ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomepageTest.popup_to_add_call_or_meeting_is_open()</td>
+              <td>4</td>
+              <td class="duration" data-value="1791570">001ms</td>
+              <td class="duration" data-value="447892">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomepageTest.user_clicks_on_calendar_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="7841361827">7s 841ms</td>
+              <td class="duration" data-value="7841361827">7s 841ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomepageTest.user_clicks_on_call_option_button()</td>
+              <td>3</td>
+              <td class="duration" data-value="446025382">446ms</td>
+              <td class="duration" data-value="148675127">148ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomepageTest.user_clicks_on_day_view_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="2426287816">2s 426ms</td>
+              <td class="duration" data-value="2426287816">2s 426ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomepageTest.user_clicks_on_month_view_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="3222615515">3s 222ms</td>
+              <td class="duration" data-value="3222615515">3s 222ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomepageTest.user_clicks_on_save_button()</td>
+              <td>3</td>
+              <td class="duration" data-value="14382229886">14s 382ms</td>
+              <td class="duration" data-value="4794076628">4s 794ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomepageTest.user_clicks_on_time_slot()</td>
+              <td>4</td>
+              <td class="duration" data-value="665849176">665ms</td>
+              <td class="duration" data-value="166462294">166ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomepageTest.user_clicks_on_week_view_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="3225610099">3s 225ms</td>
+              <td class="duration" data-value="3225610099">3s 225ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomepageTest.user_is_on_calander_screen_of_application()</td>
+              <td>3</td>
+              <td class="duration" data-value="316164742">316ms</td>
+              <td class="duration" data-value="105388247">105ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomepageTest.user_is_on_home_screen_of_application()</td>
+              <td>1</td>
+              <td class="duration" data-value="10033275">010ms</td>
+              <td class="duration" data-value="10033275">010ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomepageTest.user_is_on_month_view_of_calander_screen()</td>
+              <td>4</td>
+              <td class="duration" data-value="11016997174">11s 016ms</td>
+              <td class="duration" data-value="2754249293">2s 754ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomepageTest.users_enters(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="611721309">611ms</td>
+              <td class="duration" data-value="203907103">203ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomepageTest.week_view_opens_on_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="79466470">079ms</td>
+              <td class="duration" data-value="79466470">079ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginapplicationTest.user_clicks_on_login_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="1888639205">1s 888ms</td>
+              <td class="duration" data-value="1888639205">1s 888ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginapplicationTest.user_enter_username_something_and_password_something(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="20371018525">20s 371ms</td>
+              <td class="duration" data-value="20371018525">20s 371ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginapplicationTest.user_enters_username_something_password_something(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3188758040">3s 188ms</td>
+              <td class="duration" data-value="3188758040">3s 188ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginapplicationTest.user_is_a_non_registered_customer_and_navigate_to_application()</td>
+              <td>1</td>
+              <td class="duration" data-value="653079">000ms</td>
+              <td class="duration" data-value="653079">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginapplicationTest.user_is_on_login_screen_of_application()</td>
+              <td>2</td>
+              <td class="duration" data-value="19882365537">19s 882ms</td>
+              <td class="duration" data-value="9941182768">9s 941ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginapplicationTest.user_redirects_to_home_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="796307">000ms</td>
+              <td class="duration" data-value="796307">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginapplicationTest.validate_title_of_home_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="43526081">043ms</td>
+              <td class="duration" data-value="43526081">043ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginapplicationTest.validation_message_shown_to_the_user()</td>
+              <td>2</td>
+              <td class="duration" data-value="2828871">002ms</td>
+              <td class="duration" data-value="1414435">001ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>24</td>
+            <td>43</td>
+            <td class="duration">1m 29s 746ms</td>
+            <td class="duration">2s 087ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
